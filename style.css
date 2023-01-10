@@ -1,0 +1,77 @@
+.login-form{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+   
+}
+.login-form input{
+  margin-top: 1em;
+  font-size: 1.5em;
+  padding: .6em 1em;
+}
+.login-form input[type="submit"]{
+  background-color: chocolate;
+  border: none;
+  font-weight: 700;
+}
+
+
+/* grid layout */
+.container{
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+}
+
+/* calender */
+.calender{
+  margin: 3rem;
+  display: grid;
+  grid-template-columns: repeat(7,1fr);
+  grid-template-rows: 40px repeat(5,75px);
+  row-gap: 1rem;
+  column-gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+.date , .day{
+  background-color: rgb(161, 228, 255);
+  border-radius: .7rem;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.other-month{
+  background-color: lightgray;
+}
+
+/* responsive area */
+.food_container{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 1rem; 
+}
+.food{
+  border: 1px solid gray;
+  border-radius: 4px;
+  padding: 1rem;
+  margin: 2rem;
+  
+}
+.food img{
+  width: 100%;
+}
+
+/* responsive are media Query */
+
+@media screen  and (max-width:576px){
+  .food_container{
+    grid-template-columns: repeat(1,1fr);
+  }
+}
+@media screen and (min-width:992px) {
+  .food_container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
